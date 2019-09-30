@@ -1,0 +1,108 @@
+// Wide
+@include mediaXl {
+  .menu-btn {
+    display: none;
+  }
+}
+// Wide
+@include mediaLg {
+  .menu-btn {
+    display: none;
+  }
+}
+// Wide
+@include mediaMd {
+  svg {
+    margin: 0 auto;
+  }
+  main {
+    align-items: center;
+    text-align: center;
+  }
+
+  h1 {
+    &.lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem;
+      font-size: 4.5rem;
+    }
+  }
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0;
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  .menu-nav {
+    height: 90vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 18px;
+    justify-content: inherit;
+  }
+  .menu-branding {
+    height: 10vh;
+    transform: translate3d(100%, 0, 0);
+    .portrait {
+      background: url(../img/myPicSm.jpg);
+      width: 150px;
+      height: 150px;
+    }
+  }
+  #about {
+    .description {
+      width: 100%;
+      font-size: 1.5rem;
+    }
+  }
+  #tools {
+    .tools-icon {
+      flex-wrap: wrap;
+      justify-content: space-around;
+      div {
+        width: inherit;
+      }
+    }
+  }
+  #contact {
+    .section-heading {
+      font-size: 2rem;
+    }
+    height: 100vh;
+    .contact {
+      width: 90%;
+    }
+  }
+  .my-skills {
+    flex-direction: column;
+  }
+  .work-card {
+    flex-direction: column;
+    text-align: center;
+    .description {
+      margin: 0 auto;
+    }
+  }
+  .sticky {
+    position: initial;
+    a {
+      display: none;
+    }
+  }
+  .content {
+    width: 100%;
+  }
+  h1 {
+    &.offset {
+      position: inherit;
+      margin-bottom: 1rem;
+    }
+  }
+  .off {
+    position: unset;
+    text-align: left;
+    font-size: 1rem;
+  }
+}

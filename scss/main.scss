@@ -1,0 +1,340 @@
+@import "config";
+@import "menu";
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  @include background;
+  background: $primary-color;
+  color: set-text-color($primary-color);
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+}
+
+//Headings
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 300;
+  &.lg-heading {
+    font-size: 6rem;
+  }
+  &.offset {
+    position: relative;
+    right: 70px;
+    font-size: 5rem;
+  }
+}
+.sm-heading {
+  margin-bottom: 2rem;
+  padding: 0.2rem 1rem;
+  background: rgba(lighten($primary-color, $amount: 2), 0.5);
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+.text-secondary {
+  color: $secondary-color;
+}
+main {
+  padding: 4rem;
+  min-height: 100vh;
+  .icons {
+    margin-top: 1rem;
+
+    a {
+      padding: 0.4rem;
+      &:hover {
+        color: $secondary-color;
+        @include easeOut();
+      }
+    }
+    &.icons-contact {
+      text-align: center;
+    }
+  }
+  &#home {
+    h1 {
+      margin-top: 10vh;
+    }
+  }
+}
+
+.about-info {
+  margin-top: 2.5rem;
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas:
+    "bioimage bio bio"
+    "skill1 skill2 skill3";
+  grid-template-columns: repeat(3, 1fr);
+  .bio-image {
+    grid-area: bioimage;
+    margin: auto;
+    border-radius: 50%;
+    border: $secondary-color 2px solid;
+    height: 250px;
+    width: 250px;
+  }
+  .bio {
+    grid-area: bio;
+    font-size: 1.5rem;
+  }
+  .skill-1 {
+    grid-area: skill1;
+  }
+  .skill-2 {
+    grid-area: skill2;
+  }
+  .skill-3 {
+    grid-area: skill3;
+  }
+  .skill {
+    background: lighten($primary-color, 5);
+    padding: 0.5rem;
+  }
+}
+#main-footer {
+  text-align: center;
+  padding: 0.5rem;
+  background: darken($primary-color, 10);
+  color: white;
+  height: 40px;
+}
+.coming-soon {
+  text-align: center;
+  font-size: 3rem;
+}
+//contact page
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+textarea {
+  min-height: 200px;
+  font-size: 1.3rem;
+  resize: none;
+}
+
+.button {
+  background-color: $secondary-color;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 4px;
+}
+.flex {
+  margin-top: 5rem;
+}
+
+.view-btn {
+  border-radius: 1px;
+  font-size: 1.5rem;
+  height: 2.5rem;
+  margin: 0 auto;
+  width: 15rem;
+  text-align: center;
+  border: solid #fff 2px;
+  &:hover {
+    @include easeOut();
+    background-color: $secondary-color;
+    border: solid $secondary-color 2px;
+    cursor: pointer;
+  }
+  a {
+    display: inline-block;
+    width: 100%;
+  }
+}
+label {
+  font-size: 1.5rem;
+  padding-bottom: 15px;
+}
+.off {
+  position: relative;
+  right: 25px;
+}
+#about {
+  background: url(../img/about2.png);
+  height: 800px;
+  background-size: cover;
+  width: 100%;
+  background-attachment: fixed;
+  .description {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 2rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+  }
+}
+#skills {
+  background: $primary-color;
+  width: 100%;
+  .section-heading {
+    padding-top: 1rem;
+  }
+
+  .my-skills {
+    display: flex;
+    font-size: 3rem;
+    margin-top: 1.5rem;
+    text-align: center;
+    justify-content: space-around;
+  }
+  .skill-one,
+  .skill-two {
+    margin-top: 2.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .description {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+}
+
+#work {
+  height: 100%;
+  background: url(../img/mid.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  color: #fff;
+  overflow-x: hidden;
+  img {
+    width: 250px;
+  }
+}
+#tools {
+  background: $primary-color;
+  width: 100%;
+  .tool {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .section-heading {
+    padding-top: 1.5rem;
+  }
+  .tools-icon {
+    text-align: center;
+    font-size: 4rem;
+    display: flex;
+
+    div {
+      width: 20%;
+    }
+    i {
+      width: 15%;
+
+      &:hover {
+        transform: rotate(360deg);
+        @include easeOut();
+      }
+    }
+  }
+}
+#contact {
+  background: url(../img/contact2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  padding-bottom: 5rem;
+
+  .contact {
+    width: 50%;
+    margin: 0 auto;
+
+    .button {
+      float: right;
+    }
+  }
+}
+.section-heading {
+  font-size: 2.5rem;
+  text-align: center;
+  padding-top: 3rem;
+  color: #fff;
+}
+.line {
+  background-color: #fff;
+  height: 3px;
+  margin: 0 auto;
+  width: 8rem;
+}
+.link-wrap {
+  display: flex;
+}
+.sticky {
+  height: 3rem;
+  background: rgba(darken($primary-color, $amount: 10), 1);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  a {
+    border-right: 1px solid #fff;
+
+    display: block;
+  }
+  .link {
+    padding-top: 0.7rem;
+    width: 25%;
+    text-align: center;
+  }
+}
+.work-card {
+  padding-bottom: 3rem;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  i {
+    font-size: 10rem;
+    margin-right: 1rem;
+  }
+  .description {
+    width: 300px;
+    padding-left: 0.5rem;
+    .btn {
+      width: 5rem;
+      font-size: 1rem;
+      text-align: center;
+      border: solid #fff 2px;
+      display: inline-block;
+      margin-right: 0.5rem;
+      &:hover {
+        @include easeOut();
+        background-color: $secondary-color;
+        border: solid $secondary-color 2px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+@import "mobile";
