@@ -61,6 +61,7 @@
     <!-- 
       Main Page
      -->
+
     <main id="home">
       <h1 class="lg-heading text-secondary">Kyle Larsen</h1>
       <h2 class="sm-heading">
@@ -79,25 +80,37 @@
         ></a>
       </div>
       <div class="view-btn"><a href="#work">View My Work</a></div>
+      <div class="form">
+        <label for="font">Change the font Love</label>
+        <input type="text" name="googleFont" id="googleFont" />
+        <input type="text" name="font" id="font" />
+        <button id="change" class="button">Change</button>
+      </div>
     </main>
 
     <nav class="sticky">
       <div class="link-wrap">
-        <div class="link"><a href="#home">Home</a></div>
-        <div class="link"><a href="#about">About</a></div>
-        <div class="link"><a href="#work">Work</a></div>
-        <div class="link"><a href="#contact">Contact</a></div>
+        <div class="link"><a class="home active" href="#home">Home</a></div>
+        <div class="link"><a class="about" href="#about">About</a></div>
+        <div class="link"><a class="work" href="#work">Work</a></div>
+        <div class="link"><a class="con" href="#contact">Contact</a></div>
       </div>
     </nav>
     <div id="about">
       <div>
         <h2 class="section-heading">About Me</h2>
         <div class="line"></div>
+
         <p class="description">
-          I am a Front-End web developer based in Grand Rapids Michigan. I have
-          a passion for designing interesting, intuitive, and interactive user
-          interfaces. Innovation and creativity come together to create user
-          focused designs that will meet your needs
+          Hi I'm Kyle and I am a frontend web developer I have a passion for
+          designing interesting, intuitive, and interactive user interfaces.
+          Innovation and creativity come together to create user focused designs
+          that will meet your needs
+        </p>
+        <p class="description">
+          With a solid foundation in HTML CSS and JavaScipt creating developing
+          contet for the web is a breeze. I love Vue.js it's my favorite
+          framwork, and it makes creating any SPA or PWA easy.
         </p>
       </div>
     </div>
@@ -229,7 +242,7 @@
           data-aos-duration="1000"
           class="work-card left"
         >
-          <i class="fas fa-comment"></i>
+          <i class="fas fa-comment chatI"></i>
           <div class="description">
             <h3>Name: Chat Room</h3>
             <p>Technologies: Vue.Js, Firebase</p>
