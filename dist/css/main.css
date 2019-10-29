@@ -112,18 +112,16 @@ body {
   line-height: 1.5;
   font-family: "Roboto", sans-serif; }
   body#bg-image {
-    background: url(../img/tetons.jpg);
+    background: url(../img/mainimg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-    background-attachment: fixed; }
-    body#bg-image:after {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(154, 209, 212, 0.8);
-      z-index: -1; }
+    height: 100%;
+    width: 100%; }
 
 h1,
 h2,
@@ -148,7 +146,8 @@ h3 {
 
 a {
   color: white;
-  text-decoration: none; }
+  text-decoration: none;
+  font-size: 1.3rem; }
 
 header {
   position: fixed;
@@ -170,6 +169,14 @@ main {
         transition: all 0.5s ease-out; }
     main .icons.icons-contact {
       text-align: center; }
+  main#home input {
+    width: 30%;
+    display: block;
+    margin-bottom: 1rem; }
+  main#home .form {
+    padding-top: 4rem;
+    margin: 0 auto;
+    text-align: center; }
   main#home h1 {
     margin-top: 10vh; }
 
@@ -218,7 +225,8 @@ textarea {
   border-radius: 4px;
   box-sizing: border-box;
   margin-top: 6px;
-  margin-bottom: 16px; }
+  margin-bottom: 16px;
+  margin: 0 auto; }
 
 textarea {
   min-height: 200px;
@@ -264,13 +272,14 @@ label {
   right: 25px; }
 
 #about {
-  background: url(../img/about2.png);
-  height: 800px;
+  background: url(../img/aboutme.png);
+  height: 100%;
+  min-height: 100vh;
   background-size: cover;
   width: 100%;
   background-attachment: fixed; }
   #about .description {
-    width: 80%;
+    width: 60%;
     margin: 0 auto;
     font-size: 2rem;
     margin-top: 1rem;
@@ -281,13 +290,17 @@ label {
   background: #9ad1d4;
   width: 100%; }
   #skills .section-heading {
-    padding-top: 1rem; }
+    padding-top: 2.5rem;
+    font-weight: bold; }
   #skills .my-skills {
     display: flex;
-    font-size: 3rem;
+    font-size: 2rem;
     margin-top: 1.5rem;
     text-align: center;
-    justify-content: space-around; }
+    justify-content: space-around;
+    padding-bottom: 4rem; }
+    #skills .my-skills i {
+      font-size: 3.5rem; }
   #skills .skill-one,
   #skills .skill-two {
     margin-top: 2.5rem;
@@ -306,6 +319,9 @@ label {
   overflow-x: hidden; }
   #work img {
     width: 250px; }
+  #work .chatI {
+    text-align: center;
+    width: 250px; }
 
 #tools {
   background: #9ad1d4;
@@ -313,12 +329,15 @@ label {
   #tools .tool {
     font-size: 2rem;
     text-align: center; }
+  #tools .line {
+    margin-bottom: 1rem; }
   #tools .section-heading {
-    padding-top: 1.5rem; }
+    padding-top: 2rem; }
   #tools .tools-icon {
     text-align: center;
     font-size: 4rem;
-    display: flex; }
+    display: flex;
+    padding-bottom: 2rem; }
     #tools .tools-icon div {
       width: 20%; }
     #tools .tools-icon i {
@@ -332,15 +351,18 @@ label {
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+  height: 100vh;
   padding-bottom: 5rem; }
   #contact .contact {
+    padding-top: 5rem;
     width: 50%;
     margin: 0 auto; }
     #contact .contact .button {
       float: right; }
 
 .section-heading {
-  font-size: 2.5rem;
+  font-size: 3rem;
+  font-weight: bold;
   text-align: center;
   padding-top: 3rem;
   color: #fff; }
@@ -380,7 +402,6 @@ label {
     width: 300px;
     padding-left: 0.5rem; }
     .work-card .description .btn {
-      width: 5rem;
       font-size: 1rem;
       text-align: center;
       border: solid #fff 2px;
@@ -391,16 +412,46 @@ label {
         background-color: #f3ae18;
         border: solid #f3ae18 2px;
         cursor: pointer; }
+      .work-card .description .btn a {
+        padding: 0.5rem; }
+
+.active {
+  transition: all 0.5s ease-out;
+  color: #f3ae18; }
 
 @media screen and (min-width: 1171px) {
   .menu-btn {
+    display: none; }
+  .menu {
     display: none; } }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   .menu-btn {
+    display: none; }
+  .menu {
     display: none; } }
 
 @media screen and (max-width: 768px) {
+  body#bg-image {
+    background: url(../img/mainmobile.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat; }
+  #about {
+    background: url(../img/aboutmobile.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat; }
+  #work {
+    background: url(../img/workmobile.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat; }
+  #contact {
+    background: url(../img/contactmobile.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat; }
   svg {
     margin: 0 auto; }
   main {

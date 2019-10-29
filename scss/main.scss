@@ -42,6 +42,7 @@ h3 {
 a {
   color: white;
   text-decoration: none;
+  font-size: 1.3rem;
 }
 header {
   position: fixed;
@@ -69,6 +70,16 @@ main {
     }
   }
   &#home {
+    input {
+      width: 30%;
+      display: block;
+      margin-bottom: 1rem;
+    }
+    .form {
+      padding-top: 4rem;
+      margin: 0 auto;
+      text-align: center;
+    }
     h1 {
       margin-top: 10vh;
     }
@@ -130,6 +141,7 @@ textarea {
   box-sizing: border-box;
   margin-top: 6px;
   margin-bottom: 16px;
+  margin: 0 auto;
 }
 textarea {
   min-height: 200px;
@@ -179,13 +191,14 @@ label {
   right: 25px;
 }
 #about {
-  background: url(../img/about2.png);
-  height: 800px;
+  background: url(../img/aboutme.png);
+  height: 100%;
+  min-height: 100vh;
   background-size: cover;
   width: 100%;
   background-attachment: fixed;
   .description {
-    width: 80%;
+    width: 60%;
     margin: 0 auto;
     font-size: 2rem;
     margin-top: 1rem;
@@ -193,19 +206,26 @@ label {
     border-radius: 5px;
   }
 }
+
 #skills {
   background: $primary-color;
   width: 100%;
+
   .section-heading {
-    padding-top: 1rem;
+    padding-top: 2.5rem;
+    font-weight: bold;
   }
 
   .my-skills {
     display: flex;
-    font-size: 3rem;
+    font-size: 2rem;
     margin-top: 1.5rem;
     text-align: center;
     justify-content: space-around;
+    padding-bottom: 4rem;
+    i {
+      font-size: 3.5rem;
+    }
   }
   .skill-one,
   .skill-two {
@@ -230,6 +250,10 @@ label {
   img {
     width: 250px;
   }
+  .chatI {
+    text-align: center;
+    width: 250px;
+  }
 }
 #tools {
   background: $primary-color;
@@ -238,13 +262,17 @@ label {
     font-size: 2rem;
     text-align: center;
   }
+  .line {
+    margin-bottom: 1rem;
+  }
   .section-heading {
-    padding-top: 1.5rem;
+    padding-top: 2rem;
   }
   .tools-icon {
     text-align: center;
     font-size: 4rem;
     display: flex;
+    padding-bottom: 2rem;
 
     div {
       width: 20%;
@@ -264,10 +292,12 @@ label {
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+  height: 100vh;
 
   padding-bottom: 5rem;
 
   .contact {
+    padding-top: 5rem;
     width: 50%;
     margin: 0 auto;
 
@@ -277,7 +307,8 @@ label {
   }
 }
 .section-heading {
-  font-size: 2.5rem;
+  font-size: 3rem;
+  font-weight: bold;
   text-align: center;
   padding-top: 3rem;
   color: #fff;
@@ -322,7 +353,6 @@ label {
     width: 300px;
     padding-left: 0.5rem;
     .btn {
-      width: 5rem;
       font-size: 1rem;
       text-align: center;
       border: solid #fff 2px;
@@ -334,7 +364,14 @@ label {
         border: solid $secondary-color 2px;
         cursor: pointer;
       }
+      a {
+        padding: 0.5rem;
+      }
     }
   }
+}
+.active {
+  @include easeOut();
+  color: $secondary-color;
 }
 @import "mobile";

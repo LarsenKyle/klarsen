@@ -1,6 +1,11 @@
+@import "config";
+
 // Wide
 @include mediaXl {
   .menu-btn {
+    display: none;
+  }
+  .menu {
     display: none;
   }
 }
@@ -9,9 +14,38 @@
   .menu-btn {
     display: none;
   }
+  .menu {
+    display: none;
+  }
 }
 // Wide
 @include mediaMd {
+  body {
+    &#bg-image {
+      background: url(../img/mainmobile.jpg);
+      background-size: cover;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+    }
+  }
+  #about {
+    background: url(../img/aboutmobile.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+  #work {
+    background: url(../img/workmobile.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+  #contact {
+    background: url(../img/contactmobile.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
   svg {
     margin: 0 auto;
   }
