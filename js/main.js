@@ -5,13 +5,10 @@ const menuBranding = document.querySelector(".menu-branding")
 const menuNav = document.querySelector(".menu-nav")
 const navItems = document.querySelectorAll(".nav-item")
 
-const changeBtn = document.getElementById("change")
-
 let showMenu = false
 window.addEventListener("scroll", activeMenu)
 menuBtn.addEventListener("click", toggleMenu)
 navItems.forEach(item => item.addEventListener("click", toggleMenu))
-changeBtn.addEventListener("click", changeFont)
 
 function toggleMenu() {
   if (!showMenu) {
@@ -79,17 +76,17 @@ function activeMenu() {
     })
   }
 }
-function changeFont() {
-  const fontInput = document.getElementById("font").value
-  const googleFont = document.getElementById("googleFont").value
-  const head = document.head
-  const body = document.body
-  let link = document.createElement("link")
+// function changeFont() {
+//   const fontInput = document.getElementById("font").value
+//   const googleFont = document.getElementById("googleFont").value
+//   const head = document.head
+//   const body = document.body
+//   let link = document.createElement("link")
 
-  link.type = "text/css"
-  link.rel = "stylesheet"
-  link.href = googleFont
-  head.appendChild(link)
+//   link.type = "text/css"
+//   link.rel = "stylesheet"
+//   link.href = googleFont
+//   head.appendChild(link)
 
-  body.style.fontFamily = fontInput
-}
+//   body.style.fontFamily = fontInput
+// }
