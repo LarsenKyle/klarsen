@@ -97,6 +97,16 @@
 .current {
   color: #9ad1d4; }
 
+.move {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  transform: translateX(100vw);
+  transition: all 0.5s ease-out; }
+  .move.it {
+    transform: translateX(0);
+    transition: all 0.5s ease-out; }
+
 html {
   scroll-behavior: smooth; }
 
@@ -159,7 +169,7 @@ header {
 
 main {
   padding: 4rem;
-  min-height: 100vh; }
+  min-height: calc(100vh - 48px); }
   main .icons {
     margin-top: 1rem; }
     main .icons a {
@@ -379,8 +389,10 @@ label {
 .sticky {
   height: 3rem;
   background: #76c1c5;
-  position: sticky;
-  top: 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
   z-index: 1; }
   .sticky a {
     border-right: 1px solid #fff;
@@ -456,7 +468,8 @@ label {
     margin: 0 auto; }
   main {
     align-items: center;
-    text-align: center; }
+    text-align: center;
+    min-height: 100vh; }
   h1.lg-heading {
     line-height: 1;
     margin-bottom: 1rem;

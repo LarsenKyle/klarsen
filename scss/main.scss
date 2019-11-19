@@ -54,7 +54,7 @@ header {
 }
 main {
   padding: 4rem;
-  min-height: 100vh;
+  min-height: calc(100vh - 48px);
   .icons {
     margin-top: 1rem;
 
@@ -325,8 +325,10 @@ label {
 .sticky {
   height: 3rem;
   background: rgba(darken($primary-color, $amount: 10), 1);
-  position: sticky;
-  top: 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
   z-index: 1;
 
   a {
