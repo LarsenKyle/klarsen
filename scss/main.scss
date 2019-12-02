@@ -193,7 +193,8 @@ label {
 #about {
   background: url(../img/aboutme.png);
   height: 100%;
-
+  min-height: 110vh;
+  overflow-x: hidden;
   background-size: cover;
   width: 100%;
   background-attachment: fixed;
