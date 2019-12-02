@@ -4,6 +4,7 @@ const menu = document.querySelector(".menu")
 const menuBranding = document.querySelector(".menu-branding")
 const menuNav = document.querySelector(".menu-nav")
 const navItems = document.querySelectorAll(".nav-item")
+const navLink = document.querySelectorAll(".nav-link")
 const workBtn = document.querySelector(".view-btn")
 
 //Pages
@@ -26,32 +27,41 @@ pageLinks.forEach(item => item.addEventListener("click", menuMove))
 workBtn.addEventListener("click", menuMove)
 
 function menuMove(e) {
-  console.log(e.target)
   pagesArray.forEach(page => {
     if (page.classList.contains("it")) {
       page.classList.remove("it")
     }
   })
+
   pageLinks.forEach(link => {
     if (link.firstChild.classList.contains("active")) {
       link.firstChild.classList.remove("active")
     }
   })
+  navLink.forEach(link => {
+    if (link.classList.contains("active")) {
+      link.classList.remove("active")
+    }
+  })
   if (e.target.classList.contains("home")) {
     homePage.classList.add("it")
     pageLinks[0].firstChild.classList.add("active")
+    navLink[0].classList.add("active")
   }
   if (e.target.classList.contains("about")) {
     aboutPage.classList.add("it")
     pageLinks[1].firstChild.classList.add("active")
+    navLink[1].classList.add("active")
   }
   if (e.target.classList.contains("work")) {
     workPage.classList.add("it")
     pageLinks[2].firstChild.classList.add("active")
+    navLink[2].classList.add("active")
   }
   if (e.target.classList.contains("con")) {
     contactPage.classList.add("it")
     pageLinks[3].firstChild.classList.add("active")
+    navLink[3].classList.add("active")
   }
 }
 
