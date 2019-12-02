@@ -121,10 +121,7 @@
     }
   }
   .sticky {
-    position: initial;
-    a {
-      display: none;
-    }
+    display: none;
   }
   .content {
     width: 100%;
@@ -139,5 +136,13 @@
     position: unset;
     text-align: left;
     font-size: 1rem;
+  }
+  #work {
+    .chatI {
+      margin: 0 auto;
+    }
+  }
+  .contact {
+    padding-top: 2rem;
   }
 }
