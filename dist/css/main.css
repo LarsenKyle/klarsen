@@ -120,6 +120,7 @@ body {
   width: 100%;
   margin: 0;
   line-height: 1.5;
+  font-size: 100%;
   font-family: "Roboto", sans-serif; }
   body#bg-image {
     background: url(../img/mainimg.jpg);
@@ -284,7 +285,7 @@ label {
 #about {
   background: url(../img/aboutme.png);
   height: 100%;
-  min-height: 110vh;
+  min-height: 100vh;
   overflow-x: hidden;
   background-size: cover;
   width: 100%;
@@ -292,7 +293,7 @@ label {
   #about .description {
     width: 60%;
     margin: 0 auto;
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-top: 1rem;
     padding: 1rem;
     border-radius: 5px; }
