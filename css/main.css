@@ -120,6 +120,7 @@ body {
   width: 100%;
   margin: 0;
   line-height: 1.5;
+  font-size: 100%;
   font-family: "Roboto", sans-serif; }
   body#bg-image {
     background: url(../img/mainimg.jpg);
@@ -326,7 +327,8 @@ label {
   background-attachment: fixed;
   background-size: cover;
   width: 100%;
-  color: #fff; }
+  color: #fff;
+  overflow-x: hidden; }
   #work img {
     width: 250px; }
   #work .chatI {
