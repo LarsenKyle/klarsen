@@ -14,7 +14,7 @@ const workPage = document.getElementById("work")
 const homePage = document.getElementById("home")
 
 //Link Array, Page Array
-const pageLinks = document.querySelectorAll(".link")
+const pageLinks = document.querySelectorAll(".tink")
 const pagesArray = [contactPage, aboutPage, workPage, homePage]
 
 //Listeners
@@ -27,6 +27,7 @@ pageLinks.forEach(item => item.addEventListener("click", menuMove))
 workBtn.addEventListener("click", menuMove)
 
 function menuMove(e) {
+  console.log(e)
   pagesArray.forEach(page => {
     if (page.classList.contains("it")) {
       page.classList.remove("it")
@@ -34,8 +35,8 @@ function menuMove(e) {
   })
 
   pageLinks.forEach(link => {
-    if (link.firstChild.classList.contains("active")) {
-      link.firstChild.classList.remove("active")
+    if (link.classList.contains("active")) {
+      link.classList.remove("active")
     }
   })
   navLink.forEach(link => {
@@ -45,22 +46,22 @@ function menuMove(e) {
   })
   if (e.target.classList.contains("home")) {
     homePage.classList.add("it")
-    pageLinks[0].firstChild.classList.add("active")
+    pageLinks[0].classList.add("active")
     navLink[0].classList.add("active")
   }
   if (e.target.classList.contains("about")) {
     aboutPage.classList.add("it")
-    pageLinks[1].firstChild.classList.add("active")
+    pageLinks[1].classList.add("active")
     navLink[1].classList.add("active")
   }
   if (e.target.classList.contains("work")) {
     workPage.classList.add("it")
-    pageLinks[2].firstChild.classList.add("active")
+    pageLinks[2].classList.add("active")
     navLink[2].classList.add("active")
   }
   if (e.target.classList.contains("con")) {
     contactPage.classList.add("it")
-    pageLinks[3].firstChild.classList.add("active")
+    pageLinks[3].classList.add("active")
     navLink[3].classList.add("active")
   }
 }
