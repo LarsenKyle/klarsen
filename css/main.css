@@ -108,7 +108,8 @@
     transition: all 0.5s ease-out; }
 
 html {
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+  font-size: 15px; }
 
 * {
   box-sizing: border-box; }
@@ -322,6 +323,7 @@ label {
     font-size: 1.5rem; }
 
 #work {
+  padding-bottom: 2rem;
   height: 100%;
   background: url(../img/mid.jpg);
   background-attachment: fixed;
@@ -329,6 +331,11 @@ label {
   width: 100%;
   color: #fff;
   overflow-x: hidden; }
+  #work .emph {
+    text-decoration: underline;
+    font-style: italic; }
+  #work .description {
+    font-size: 1.2rem; }
   #work img {
     width: 250px; }
   #work .chatI {
