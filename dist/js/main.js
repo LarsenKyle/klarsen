@@ -1,86 +1,85 @@
 // Dom Selectors
-const menuBtn = document.querySelector(".menu-btn")
-const menu = document.querySelector(".menu")
-const menuBranding = document.querySelector(".menu-branding")
-const menuNav = document.querySelector(".menu-nav")
-const navItems = document.querySelectorAll(".nav-item")
-const navLink = document.querySelectorAll(".nav-link")
-const workBtn = document.querySelector(".view-btn")
+const menuBtn = document.querySelector(".menu-btn");
+const menu = document.querySelector(".menu");
+const menuBranding = document.querySelector(".menu-branding");
+const menuNav = document.querySelector(".menu-nav");
+const navItems = document.querySelectorAll(".nav-item");
+const navLink = document.querySelectorAll(".nav-link");
+const workBtn = document.querySelector(".view-btn");
 
 //Pages
-const contactPage = document.getElementById("contact")
-const aboutPage = document.getElementById("about")
-const workPage = document.getElementById("work")
-const homePage = document.getElementById("home")
+const contactPage = document.getElementById("contact");
+const aboutPage = document.getElementById("about");
+const workPage = document.getElementById("work");
+const homePage = document.getElementById("home");
 
 //Link Array, Page Array
-const pageLinks = document.querySelectorAll(".tink")
-const pagesArray = [contactPage, aboutPage, workPage, homePage]
+const pageLinks = document.querySelectorAll(".tink");
+const pagesArray = [contactPage, aboutPage, workPage, homePage];
 
 //Listeners
-let showMenu = false
+let showMenu = false;
 // window.addEventListener("scroll", activeMenu)
-menuBtn.addEventListener("click", toggleMenu)
-navItems.forEach(item => item.addEventListener("click", toggleMenu))
-navItems.forEach(item => item.addEventListener("click", menuMove))
-pageLinks.forEach(item => item.addEventListener("click", menuMove))
-workBtn.addEventListener("click", menuMove)
+menuBtn.addEventListener("click", toggleMenu);
+navItems.forEach(item => item.addEventListener("click", toggleMenu));
+navItems.forEach(item => item.addEventListener("click", menuMove));
+pageLinks.forEach(item => item.addEventListener("click", menuMove));
+workBtn.addEventListener("click", menuMove);
 
 function menuMove(e) {
-  console.log(e)
   pagesArray.forEach(page => {
     if (page.classList.contains("it")) {
-      page.classList.remove("it")
+      page.classList.remove("it");
     }
-  })
+  });
 
   pageLinks.forEach(link => {
     if (link.classList.contains("active")) {
-      link.classList.remove("active")
+      link.classList.remove("active");
     }
-  })
+  });
   navLink.forEach(link => {
     if (link.classList.contains("active")) {
-      link.classList.remove("active")
+      link.classList.remove("active");
     }
-  })
+  });
   if (e.target.classList.contains("home")) {
-    homePage.classList.add("it")
-    pageLinks[0].classList.add("active")
-    navLink[0].classList.add("active")
+    homePage.classList.add("it");
+    pageLinks[0].classList.add("active");
+    navLink[0].classList.add("active");
   }
   if (e.target.classList.contains("about")) {
-    aboutPage.classList.add("it")
-    pageLinks[1].classList.add("active")
-    navLink[1].classList.add("active")
+    aboutPage.classList.add("it");
+    pageLinks[1].classList.add("active");
+    navLink[1].classList.add("active");
   }
   if (e.target.classList.contains("work")) {
-    workPage.classList.add("it")
-    pageLinks[2].classList.add("active")
-    navLink[2].classList.add("active")
+    workPage.classList.add("it");
+    pageLinks[2].classList.add("active");
+    navLink[2].classList.add("active");
   }
   if (e.target.classList.contains("con")) {
-    contactPage.classList.add("it")
-    pageLinks[3].classList.add("active")
-    navLink[3].classList.add("active")
+    contactPage.classList.add("it");
+    pageLinks[3].classList.add("active");
+    navLink[3].classList.add("active");
   }
 }
 
 function toggleMenu() {
   if (!showMenu) {
-    menuBtn.classList.add("close")
-    menu.classList.add("show")
-    menuNav.classList.add("show")
-    menuBranding.classList.add("show")
-    navItems.forEach(item => item.classList.add("show"))
-    showMenu = true
+    menuBtn.classList.add("close");
+    menu.classList.add("show");
+    menuNav.classList.add("show");
+    menuBranding.classList.add("show");
+    navItems.forEach(item => item.classList.add("show"));
+    showMenu = true;
   } else {
-    menuBtn.classList.remove("close")
-    menu.classList.remove("show")
-    menuNav.classList.remove("show")
-    menuBranding.classList.remove("show")
-    navItems.forEach(item => item.classList.remove("show"))
-    showMenu = false
+    menuBtn.classList.remove("close");
+    menu.classList.remove("show");
+    menuNav.classList.remove("show");
+    menuBranding.classList.remove("show");
+    navItems.forEach(item => item.classList.remove("show"));
+    showMenu = false;
   }
 }
 // function activeMenu() {

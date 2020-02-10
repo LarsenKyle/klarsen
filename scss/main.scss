@@ -3,6 +3,7 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 15px;
 }
 
 * {
@@ -242,6 +243,7 @@ label {
 }
 
 #work {
+  padding-bottom: 2rem;
   height: 100%;
   background: url(../img/mid.jpg);
   background-attachment: fixed;
@@ -249,7 +251,13 @@ label {
   width: 100%;
   color: #fff;
   overflow-x: hidden;
-
+  .emph {
+    text-decoration: underline;
+    font-style: italic;
+  }
+  .description {
+    font-size: 1.2rem;
+  }
   img {
     width: 250px;
   }
